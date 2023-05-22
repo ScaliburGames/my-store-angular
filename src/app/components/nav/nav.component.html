@@ -1,0 +1,56 @@
+<div class="show-movile">
+    <div>
+        <button (click)="toggleMenu()">
+            <img src="../../../assets/images/menu-icon.png" alt="menu">
+        </button>
+        <a href="">
+            <img src="../../../assets/images/yard-sale.png" alt="sale">
+        </a>
+        <a href="">
+            <img src="../../../assets/images/shopping-cart.svg" alt="shopping">
+        </a>
+    </div>
+    <div class="side-menu" [class.active]="activeMenu">
+        <button (click)="toggleMenu()">Close</button>
+        <ul>
+            <li>
+                <a href="">All</a>
+            </li>
+            <li>
+                <a href="">Clothes</a>
+            </li>
+            <li>
+                <a href="">Electronica</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="hide-movile">
+    <div>
+        <nav>
+            <a class="logo" href="">
+                <img src="../../../assets/images/yard-sale.png" alt="sale">
+            </a>
+            <ul>
+                <li>
+                    <a href="">All</a>
+                </li>
+                <li>
+                    <a href="">Clothes</a>
+                </li>
+                <li>
+                    <a href="">Electronica</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="info">
+            <div class="account">daniel@arellano.com</div>
+            <div>
+                <a href="">
+                    <img src="../../../assets/images/shopping-cart.svg" alt="sale">
+                </a>
+                <span class="counter">{{counter}}</span>
+            </div>
+        </div>
+    </div>
+</div>

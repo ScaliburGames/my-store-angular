@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Product } from './models/product.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'my-store';
+  imgParent:string | null = null;
+  msgHijo:string = "";
+  showImg = true;
+
+  
+
+  onLoaded(event: string):void{
+    this.msgHijo = event;
+  }
+
+  toggleImg(){
+    this.showImg = !this.showImg;
+  }
 }

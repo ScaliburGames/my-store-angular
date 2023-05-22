@@ -1,0 +1,16 @@
+<p>
+    La cantidad: {{myShoppingCar.length}}
+</p>
+<p>
+    Total: {{total}}€
+</p>
+<p>
+    Today: {{today | date: 'short'}}
+</p>
+<p>
+    Otra fecha: {{date | timeAgo}}
+</p>
+
+<div class="products-grid">
+    <app-product *ngFor="let product of products" [product]="product" (addedProduct)="onAddToShoppingCar($event)"></app-product>
+</div>
